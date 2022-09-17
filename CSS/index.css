@@ -1,0 +1,239 @@
+
+/* ---------------------------------------------- */
+/*                    Root                        */
+/* ---------------------------------------------- */
+:root{
+    /* ### Primary */
+    --Very-Dark-Magenta: hsl(300, 43%, 22%);
+    --Soft-Pink: hsl(333, 80%, 67%);
+    /* ### Neutral */
+    --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+    --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+}
+/* ---------------------------------------------- */
+/* ----------------- Global Style --------------- */
+/* ---------------------------------------------- */
+*{
+    box-sizing: border-box;
+    font-family: 'League Spartan', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body{
+    max-width: 1440px;
+    min-height: 100vh;
+    background: url("../images/bg-pattern-top-desktop.svg") no-repeat,
+    url("../images/bg-pattern-bottom-desktop.svg") no-repeat 300px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+main{
+    padding: 130px;
+}
+/* ---------------------------------------------- */
+/*                 Container Style                */
+/* ---------------------------------------------- */
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.container article{
+    width: 30%;
+}
+.container article h1{
+    font-size: 50px;
+    color: var(--Very-Dark-Magenta);
+    margin-bottom: 20px;
+}
+.container article p{
+    font-size: 15px;
+    color: var(--Dark-Grayish-Magenta);
+    line-height: 1.3rem;
+}
+.container section{
+    padding: 30px 0px 0px 30px;
+}
+.container section .sec1,
+.container section .sec2,
+.container section .sec3{
+    display: flex;
+    align-items: center;
+    background-color: var(--Light-Grayish-Magenta);
+    padding: 15px 40px 15px 30px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+.container section .sec1{
+    margin-left: -80px;
+    margin-right: 80px;
+}
+.container section .sec2{
+    margin-left: -40px;
+    margin-right: 40px;
+}
+.container section .stars{
+    margin-right: 40px;
+}
+.container section p{
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--Very-Dark-Magenta);
+}
+/* ---------------------------------------------- */
+/*                 3 Persons Style                */
+/* ---------------------------------------------- */
+.persons{
+    margin-top: 70px;
+    display: flex;
+    grid-gap: 30px;
+}
+.persons .per1,
+.persons .per2,
+.persons .per3{
+    padding: 40px 30px;
+    background-color: var(--Very-Dark-Magenta);
+    border-radius: 8px;
+}
+.persons .per2{
+    margin-top: 20px;
+    margin-bottom: -20px;
+}
+.persons .per3{
+    margin-top: 40px;
+    margin-bottom: -40px;
+}
+.persons .info{
+    display: flex;
+    align-items: center;
+}
+.persons .info img{
+    border-radius: 50%;
+    width: 40px;
+    margin-right: 20px;
+}
+.persons .info .name-per h3:nth-child(1){
+    color: var(--White);
+    font-size: 15px;
+    margin-bottom: 8px;
+}
+.persons .info .name-per h3:nth-child(2){
+    color: var(--Soft-Pink);
+    font-size: 15px;
+}
+.persons .desc{
+    margin-top: 20px;    
+}
+.persons .desc p{
+    color: var(--Light-Grayish-Magenta);
+    line-height: 1.5rem;
+}
+/* ---------------------------------------------- */
+/*                 footer Style                   */
+/* ---------------------------------------------- */
+.attribution {
+    font-size: 15px; 
+    font-weight: 600;
+    position: absolute;
+    bottom: 20px;
+    letter-spacing: 1px;
+    color: var(--Very-Dark-Magenta);
+}
+.attribution a {
+    color: var(--Soft-Pink);
+    text-decoration: none;
+}
+/* ---------------------------------------------- */
+/*                 Media Quere                    */
+/* ---------------------------------------------- */
+@media only screen and (max-width: 376px){
+    body{
+        max-width: 375px;
+        background: url("../images/bg-pattern-top-mobile.svg") no-repeat,
+        url("../images/bg-pattern-bottom-mobile.svg") no-repeat 300px;
+        flex-direction: column;
+        text-align: center;
+    }
+    main{
+        padding: 70px 20px;
+    }
+    .container{
+        flex-direction: column;
+        width: 100%;
+    }
+    .container article{
+        width: 80%;
+        margin-left: 10%;
+    }
+    .container article h1{
+        font-size: 30px;
+        margin-bottom: 15px;
+    }
+    .container section{
+        padding: 30px 0 0 0;
+    }
+    .container section .sec1,
+    .container section .sec2,
+    .container section .sec3{
+        flex-direction: column;
+        padding: 15px 40px 15px 30px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+    .container section .sec1,.container section .sec2{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+    .container section .stars{
+        margin-right: 0px;
+        margin-bottom: 10px;
+    }
+    .persons{
+        margin-top: 30px;
+        flex-direction: column;
+        grid-gap: 10px;
+    }
+    .persons .per1,
+    .persons .per2,
+    .persons .per3{
+        padding: 40px 30px;
+        background-color: var(--Very-Dark-Magenta);
+        border-radius: 8px;
+        text-align: left;
+    }
+    .persons .per2,.persons .per3{
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .persons .info{
+        display: flex;
+        align-items: center;
+    }
+    .persons .info img{
+        border-radius: 50%;
+        width: 40px;
+        margin-right: 20px;
+    }
+    .persons .info .name-per h3:nth-child(1){
+        color: var(--White);
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+    .persons .info .name-per h3:nth-child(2){
+        color: var(--Soft-Pink);
+        font-size: 15px;
+    }
+    .persons .desc{
+        margin-top: 20px;    
+    }
+    .persons .desc p{
+        color: var(--Light-Grayish-Magenta);
+        line-height: 1.5rem;
+    }
+    .attribution{
+        font-size: 11px;
+        bottom: 10px;
+        margin-left: 13%;
+    }
+}
